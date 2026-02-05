@@ -42,7 +42,7 @@ export interface IMessage {
 
     /** Content: System Notifications (Mutually exclusive with texts) */
     systems?: {
-        kind: "typography:lines" | "alert:lines" | "typography" | "typography:leave";
+        kind: "typography:lines" | "alert:lines" | "typography" | "typography:leave" | "typography:join";
         type: "warning" | "info" | "secondary";
         message?: string; // e.g., "Room Info"
         children: string | { name: string; time: string };
