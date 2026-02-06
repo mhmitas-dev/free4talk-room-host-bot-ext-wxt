@@ -116,6 +116,8 @@ function App() {
           </div>
         )}
       </form>
+      <p>https://free4talk-bot-server-api-mh1124.vercel.app/</p>
+      <p>chat-room-host-bot</p>
     </div>
   );
 }

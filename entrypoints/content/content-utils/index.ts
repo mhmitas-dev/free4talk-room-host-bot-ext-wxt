@@ -9,7 +9,7 @@ export function shouldAIReply(message: IMessage): boolean {
     greetNewParticipant(message);
 
     // 1. Ignore own messages
-    if (message.isMyself) return false;
+    if (message.isMyself || message.from?.name?.toLocaleLowerCase() === "teddybot") return false;
 
     // 2. Ignore system/admin
     const senderId = message.from?.id;
@@ -86,6 +86,5 @@ export function greetNewParticipant(message: IMessage): void {
     ];
 
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-
     postMessageToUi(randomGreeting);
 }
