@@ -97,7 +97,7 @@ async function processMessage(queuedMsg: QueuedMessage) {
         }
 
         // NORMAL MESSAGE
-        console.log(`✅ AI: ${reply}`);
+        // console.log(`✅ AI: ${reply}`);
         postMessageToUi(reply);
 
     } catch (error) {
